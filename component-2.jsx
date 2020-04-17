@@ -11,8 +11,8 @@ class ComponentTwo extends Component {
     money: getState("_globalStateMoney")
   };
   componentDidMount() {
-    connectToState(["_globalStateMoney"], state =>
-      this.setState({ money: state._globalStateMoney })
+    connectToState(["_globalStateMoney"], stream =>
+      this.setState({ money: stream._globalStateMoney })
     );
   }
   render() {

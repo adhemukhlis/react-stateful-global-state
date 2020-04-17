@@ -17,10 +17,10 @@ class ComponentIndex extends Component {
     qty: getState("_globalStateQTY")
   };
   componentDidMount() {
-    connectToState(["_globalStateMoney", "_globalStateQTY"], state =>
+    connectToState(["_globalStateMoney", "_globalStateQTY"], stream =>
       this.setState({
-        money: state._globalStateMoney,
-        qty: state._globalStateQTY
+        money: stream._globalStateMoney,
+        qty: stream._globalStateQTY
       })
     );
   }
